@@ -1,0 +1,15 @@
+<div class="my-3">
+<h5>Add a Todo</h5>
+<form (ngSubmit)="onSubmit()" #todoForm="ngForm">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" [(ngModel)]="title" class="form-control" name = "title" id="todoTitle" placeholder="Enter your todo title" required>
+    </div>
+    <div class="mb-3">
+        <label for="desc" class="form-label">Description</label>
+        <input type="text" class="form-control" name = "desc" id="todoDesc" placeholder="Enter todo description" [(ngModel)]="desc" required  >
+        
+    </div>
+    <button type="submit" style="margin-bottom: 15px;" class="btn btn-success" [disabled]="todoForm.invalid">Add</button>
+</form>
+</div>
